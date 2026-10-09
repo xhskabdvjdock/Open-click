@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OpenClick.App/OpenClick.App.csproj" />
+    <Project Path="src/OpenClick.Core/OpenClick.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OpenClick.Tests/OpenClick.Tests.csproj" />
+  </Folder>
+</Solution>

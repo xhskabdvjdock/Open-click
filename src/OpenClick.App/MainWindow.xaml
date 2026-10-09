@@ -1,0 +1,45 @@
+﻿<Window x:Class="OpenClick.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Open Click" Height="720" Width="1080" MinHeight="560" MinWidth="860"
+        WindowStartupLocation="CenterScreen">
+  <Grid x:Name="RootGrid" Background="{StaticResource BgBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Border Grid.Row="0" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,0,1" Padding="16,10">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+          <Ellipse x:Name="HeaderDot" Width="12" Height="12" Margin="0,0,10,0"/>
+          <TextBlock x:Name="AppTitle" FontSize="17" FontWeight="Bold" Foreground="{StaticResource FgBrush}" VerticalAlignment="Center"/>
+          <TextBlock x:Name="HeaderStatus" Style="{StaticResource MutedText}" Margin="12,0,0,0" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+          <Button x:Name="HeaderToggle" Click="HeaderToggle_Click" MinWidth="140"/>
+          <Button x:Name="HeaderBypass" Click="HeaderBypass_Click" Style="{StaticResource GhostButton}" Margin="8,0,0,0"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Border Grid.Column="0" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,1,0" Padding="10">
+        <StackPanel x:Name="NavPanel">
+          <Button x:Name="NavDashboard" Click="Nav_Click" Tag="0" Margin="0,0,0,6" HorizontalContentAlignment="Left"/>
+          <Button x:Name="NavFilter" Click="Nav_Click" Tag="1" Margin="0,0,0,6" HorizontalContentAlignment="Left"/>
+          <Button x:Name="NavTester" Click="Nav_Click" Tag="2" Margin="0,0,0,6" HorizontalContentAlignment="Left"/>
+          <Button x:Name="NavProfiles" Click="Nav_Click" Tag="3" Margin="0,0,0,6" HorizontalContentAlignment="Left"/>
+          <Button x:Name="NavSettings" Click="Nav_Click" Tag="4" Margin="0,0,0,6" HorizontalContentAlignment="Left"/>
+        </StackPanel>
+      </Border>
+      <ContentControl x:Name="PageHost" Grid.Column="1" Margin="16"/>
+    </Grid>
+  </Grid>
+</Window>

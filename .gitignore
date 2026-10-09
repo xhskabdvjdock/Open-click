@@ -1,0 +1,30 @@
+## .NET build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+publish/
+[TestT]est[Rr]esult*/
+*.user
+*.suo
+.vs/
+*.userprefs
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+*.swp
+.idea/
+
+## Local app data created by test runs (never commit)
+*.corrupt-*.bak
+
+## Keep installer script, but not built installer binaries
+publish/installer/*.exe
